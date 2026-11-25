@@ -1,0 +1,57 @@
+{
+  "_doc": "Capacites. shape: Melee | Projectile | Nova | Dash | Buff | Heal. element: Neutral Fire Water Nature Stone Storm Frost Shadow Light. status: Burn Soaked Rooted Stunned Frozen Blinded Asleep. range/radius en cm. special=true utilise l'Esprit. ultimate=true : coup special (jauge de Resonance).",
+  "abilities": [
+    { "id": "morsure", "name": "Morsure", "element": "Neutral", "shape": "Melee", "power": 30, "cooldown": 1.3, "range": 180, "description": "Coup de crocs rapide." },
+    { "id": "charge", "name": "Charge", "element": "Neutral", "shape": "Dash", "power": 38, "cooldown": 2.5, "range": 700, "description": "Fonce sur l'adversaire." },
+    { "id": "cri_galvanisant", "name": "Cri galvanisant", "element": "Neutral", "shape": "Buff", "buff": 0.4, "cooldown": 14, "description": "Attaque +40% pendant 10 s." },
+    { "id": "repos", "name": "Repos", "element": "Neutral", "shape": "Heal", "buff": 0.3, "cooldown": 20, "description": "Recupere 30% des PV." },
+
+    { "id": "flammeche", "name": "Flammèche", "element": "Fire", "shape": "Projectile", "power": 36, "cooldown": 1.8, "range": 1600, "special": true, "status": "Burn", "statusChance": 0.2, "description": "Petite boule de feu. Peut bruler." },
+    { "id": "griffes_ardentes", "name": "Griffes ardentes", "element": "Fire", "shape": "Melee", "power": 48, "cooldown": 2.0, "range": 200, "status": "Burn", "statusChance": 0.15, "description": "Griffes chauffees a blanc." },
+    { "id": "souffle_brasier", "name": "Souffle brasier", "element": "Fire", "shape": "Nova", "power": 62, "cooldown": 6, "radius": 450, "special": true, "status": "Burn", "statusChance": 0.3, "vfxScale": 1.3, "description": "Vague de chaleur autour de soi." },
+    { "id": "charge_magma", "name": "Charge de magma", "element": "Fire", "shape": "Dash", "power": 62, "cooldown": 4, "range": 800, "status": "Burn", "statusChance": 0.2, "description": "Charge enveloppee de lave." },
+    { "id": "ult_tempete_braises", "name": "Tempête de braises", "element": "Fire", "shape": "Nova", "power": 115, "cooldown": 2, "radius": 700, "special": true, "ultimate": true, "status": "Burn", "statusChance": 0.7, "vfxScale": 1.5, "description": "Un tourbillon de braises embrase tout autour." },
+    { "id": "ult_crocs_magma", "name": "Crocs de magma", "element": "Fire", "shape": "Dash", "power": 150, "cooldown": 2, "range": 1000, "ultimate": true, "status": "Burn", "statusChance": 0.8, "vfxScale": 1.6, "description": "Bond devastateur, crocs en fusion." },
+    { "id": "ult_coulee_lave", "name": "Coulée de lave", "element": "Fire", "shape": "Nova", "power": 155, "cooldown": 2, "radius": 900, "ultimate": true, "status": "Burn", "statusChance": 0.8, "vfxScale": 1.8, "description": "Fait jaillir la lave du sol." },
+
+    { "id": "jet_eau", "name": "Jet d'eau", "element": "Water", "shape": "Projectile", "power": 36, "cooldown": 1.8, "range": 1600, "special": true, "status": "Soaked", "statusChance": 0.4, "description": "Jet sous pression. Peut tremper (vulnerable a la Foudre)." },
+    { "id": "queue_aqua", "name": "Queue aqua", "element": "Water", "shape": "Melee", "power": 46, "cooldown": 2.0, "range": 220, "description": "Coup de queue charge d'eau." },
+    { "id": "vague", "name": "Vague", "element": "Water", "shape": "Nova", "power": 58, "cooldown": 6, "radius": 480, "special": true, "status": "Soaked", "statusChance": 0.5, "vfxScale": 1.3, "description": "Une vague deferle autour du lanceur." },
+    { "id": "bulle_apaisante", "name": "Bulle apaisante", "element": "Water", "shape": "Heal", "buff": 0.3, "cooldown": 18, "description": "Recupere 30% des PV." },
+    { "id": "ult_maelstrom", "name": "Maelström", "element": "Water", "shape": "Nova", "power": 125, "cooldown": 2, "radius": 800, "special": true, "ultimate": true, "status": "Soaked", "statusChance": 1.0, "vfxScale": 1.6, "description": "Tourbillon geant qui trempe tous les ennemis." },
+    { "id": "ult_raz_de_maree", "name": "Raz-de-marée", "element": "Water", "shape": "Nova", "power": 175, "cooldown": 2, "radius": 1300, "special": true, "ultimate": true, "status": "Soaked", "statusChance": 1.0, "vfxScale": 2.2, "description": "L'ocean entier se souleve." },
+
+    { "id": "fouet_liane", "name": "Fouet-liane", "element": "Nature", "shape": "Melee", "power": 40, "cooldown": 1.6, "range": 320, "status": "Rooted", "statusChance": 0.2, "description": "Lianes qui fouettent et entravent." },
+    { "id": "graines_explosives", "name": "Graines explosives", "element": "Nature", "shape": "Projectile", "power": 46, "cooldown": 2.4, "range": 1500, "special": true, "description": "Graines qui eclatent a l'impact." },
+    { "id": "spores", "name": "Spores soporifiques", "element": "Nature", "shape": "Nova", "power": 12, "cooldown": 11, "radius": 420, "special": true, "status": "Asleep", "statusChance": 0.6, "statusDuration": 4.5, "description": "Nuage qui endort. Ideal avant une capture !" },
+    { "id": "photosynthese", "name": "Photosynthèse", "element": "Nature", "shape": "Heal", "buff": 0.35, "cooldown": 16, "description": "Recupere 35% des PV." },
+    { "id": "charge_sylvestre", "name": "Charge sylvestre", "element": "Nature", "shape": "Dash", "power": 62, "cooldown": 4.5, "range": 850, "description": "Charge, bois en avant." },
+    { "id": "ult_foret_vivante", "name": "Forêt vivante", "element": "Nature", "shape": "Nova", "power": 125, "cooldown": 2, "radius": 850, "special": true, "ultimate": true, "status": "Rooted", "statusChance": 0.9, "vfxScale": 1.7, "description": "Des racines geantes jaillissent et emprisonnent." },
+
+    { "id": "jet_pierres", "name": "Jet de pierres", "element": "Stone", "shape": "Projectile", "power": 42, "cooldown": 2.0, "range": 1400, "description": "Projette des eclats de roche." },
+    { "id": "poing_roc", "name": "Poing de roc", "element": "Stone", "shape": "Melee", "power": 58, "cooldown": 2.3, "range": 240, "status": "Stunned", "statusChance": 0.12, "statusDuration": 1.5, "description": "Coup massif qui peut etourdir." },
+    { "id": "seisme", "name": "Séisme", "element": "Stone", "shape": "Nova", "power": 72, "cooldown": 8, "radius": 620, "status": "Stunned", "statusChance": 0.25, "statusDuration": 1.5, "vfxScale": 1.5, "description": "Le sol tremble autour du lanceur." },
+    { "id": "carapace", "name": "Carapace", "element": "Stone", "shape": "Buff", "buff": 0.35, "cooldown": 15, "description": "Se durcit : attaque +35% pendant 10 s." },
+    { "id": "ult_eboulement", "name": "Éboulement titanesque", "element": "Stone", "shape": "Nova", "power": 155, "cooldown": 2, "radius": 850, "ultimate": true, "status": "Stunned", "statusChance": 0.6, "statusDuration": 2, "vfxScale": 1.8, "description": "Une avalanche de rochers." },
+
+    { "id": "etincelle", "name": "Étincelle", "element": "Storm", "shape": "Projectile", "power": 34, "cooldown": 1.4, "range": 1600, "special": true, "status": "Stunned", "statusChance": 0.12, "statusDuration": 1, "description": "Decharge rapide." },
+    { "id": "eclair", "name": "Éclair", "element": "Storm", "shape": "Projectile", "power": 64, "cooldown": 4, "range": 2000, "special": true, "status": "Stunned", "statusChance": 0.2, "statusDuration": 1.5, "description": "La foudre frappe la cible." },
+    { "id": "plongeon_orageux", "name": "Plongeon orageux", "element": "Storm", "shape": "Dash", "power": 58, "cooldown": 4, "range": 1000, "description": "Pique electrique depuis le ciel." },
+    { "id": "ult_colere_ciel", "name": "Colère du ciel", "element": "Storm", "shape": "Nova", "power": 145, "cooldown": 2, "radius": 950, "special": true, "ultimate": true, "status": "Stunned", "statusChance": 0.5, "statusDuration": 2, "vfxScale": 2.0, "description": "Une pluie d'eclairs s'abat." },
+
+    { "id": "souffle_givrant", "name": "Souffle givrant", "element": "Frost", "shape": "Projectile", "power": 40, "cooldown": 2.0, "range": 1500, "special": true, "status": "Frozen", "statusChance": 0.12, "statusDuration": 2.5, "description": "Souffle glace qui peut geler." },
+    { "id": "pics_glace", "name": "Pics de glace", "element": "Frost", "shape": "Melee", "power": 52, "cooldown": 2.2, "range": 240, "description": "Coups de cristaux aceres." },
+    { "id": "blizzard", "name": "Blizzard", "element": "Frost", "shape": "Nova", "power": 66, "cooldown": 8, "radius": 560, "special": true, "status": "Frozen", "statusChance": 0.25, "statusDuration": 2.5, "vfxScale": 1.4, "description": "Tempete de neige autour du lanceur." },
+    { "id": "ult_zero_absolu", "name": "Zéro absolu", "element": "Frost", "shape": "Nova", "power": 145, "cooldown": 2, "radius": 850, "special": true, "ultimate": true, "status": "Frozen", "statusChance": 0.7, "statusDuration": 3, "vfxScale": 1.8, "description": "Tout gele instantanement." },
+
+    { "id": "griffe_ombre", "name": "Griffe d'ombre", "element": "Shadow", "shape": "Melee", "power": 50, "cooldown": 1.8, "range": 220, "status": "Blinded", "statusChance": 0.2, "description": "Griffure surgie de l'ombre." },
+    { "id": "voile_nocturne", "name": "Voile nocturne", "element": "Shadow", "shape": "Nova", "power": 28, "cooldown": 10, "radius": 500, "special": true, "status": "Blinded", "statusChance": 0.7, "description": "Plonge les alentours dans le noir." },
+    { "id": "bond_obscur", "name": "Bond obscur", "element": "Shadow", "shape": "Dash", "power": 56, "cooldown": 4, "range": 900, "description": "Disparait et reapparait sur la cible." },
+    { "id": "ult_eclipse", "name": "Éclipse", "element": "Shadow", "shape": "Nova", "power": 140, "cooldown": 2, "radius": 850, "special": true, "ultimate": true, "status": "Asleep", "statusChance": 0.5, "statusDuration": 4, "vfxScale": 1.8, "description": "La lumiere s'eteint ; les ennemis sombrent dans le sommeil." },
+
+    { "id": "rayon_lumiere", "name": "Rayon de lumière", "element": "Light", "shape": "Projectile", "power": 46, "cooldown": 2.0, "range": 1800, "special": true, "status": "Blinded", "statusChance": 0.2, "description": "Faisceau eblouissant." },
+    { "id": "flash", "name": "Flash", "element": "Light", "shape": "Nova", "power": 22, "cooldown": 10, "radius": 520, "special": true, "status": "Blinded", "statusChance": 0.8, "description": "Eclair aveuglant." },
+    { "id": "aura_soin", "name": "Aura de soin", "element": "Light", "shape": "Heal", "buff": 0.45, "cooldown": 18, "description": "Recupere 45% des PV." },
+    { "id": "ult_supernova", "name": "Supernova", "element": "Light", "shape": "Nova", "power": 185, "cooldown": 2, "radius": 1100, "special": true, "ultimate": true, "status": "Blinded", "statusChance": 1.0, "vfxScale": 2.4, "description": "Explosion stellaire." }
+  ]
+}

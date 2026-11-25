@@ -1,0 +1,1091 @@
+{
+  "_doc": "Especes. Modifiable sans recompiler. biomes : Plains Forest Mountains Peaks Volcano Shore Water. movement : Ground Flying Swimming Amphibious. temperament : Docile Skittish Territorial Aggressive. spawnPhase/capture.phase : Any Day Night Twilight. weathers : Clear Cloudy Rain Storm Fog Snow. size = plus grande dimension du modele en metres. assetFolder = dossier Unreal contenant le SkeletalMesh + animations.",
+  "_visual_doc": "Assets realistes (optionnel) : ajoute a une espece un bloc \"visual\" : {\"blueprint\": \"/Game/Creatures/Loup/BP_Loup\" (enfant de Creature : mesh, fourrure Groom, materiaux, AnimBP), OU \"mesh\": \"/Game/.../SK_Loup\", \"animBlueprint\": \"/Game/.../ABP_Loup\", \"anims\": {\"Idle\": \"/Game/.../A_Idle\", \"Walk\": \"...\", \"Run\": \"...\", \"Attack\": \"...\", \"Fly\": \"...\", \"Swim\": \"...\"}, \"yaw\": -90, \"saddleSocket\": \"spine_03\", \"keepScale\": false}. Meme principe pour le joueur dans \"player\" (ex. un Blueprint MetaHuman). Champs vides = modeles procéduraux.",
+  "starters": [
+    "Braisillon",
+    "Ondrelle",
+    "Feuillouve"
+  ],
+  "playerAssetFolder": "/Game/Aetherwild/Characters/Tamer",
+  "meshYawOffset": -90,
+  "player": {
+    "blueprint": "",
+    "mesh": "",
+    "animBlueprint": "",
+    "anims": {},
+    "yaw": -90,
+    "heightCm": 176
+  },
+  "species": [
+    {
+      "id": "Braisillon",
+      "name": "Braisillon",
+      "element": "Fire",
+      "rarity": "Common",
+      "description": "Petit renard dont la queue brule d'une flamme qui ne s'eteint jamais. Curieux mais craintif, il se cache dans les hautes herbes.",
+      "stats": {
+        "hp": 44,
+        "atk": 12,
+        "def": 9,
+        "spi": 13,
+        "spd": 14
+      },
+      "catchRate": 0.55,
+      "baseXP": 40,
+      "biomes": [
+        "Plains",
+        "Volcano"
+      ],
+      "minLevel": 2,
+      "maxLevel": 9,
+      "size": 1.1,
+      "movement": "Ground",
+      "walkSpeed": 230,
+      "runSpeed": 720,
+      "temperament": "Skittish",
+      "color": "#e0612a",
+      "accent": "#ffb000",
+      "emitsLight": true,
+      "aptitudes": [
+        "Torche (eclaire la nuit)"
+      ],
+      "learnset": [
+        [
+          1,
+          "morsure"
+        ],
+        [
+          1,
+          "flammeche"
+        ],
+        [
+          5,
+          "cri_galvanisant"
+        ],
+        [
+          9,
+          "griffes_ardentes"
+        ],
+        [
+          14,
+          "souffle_brasier"
+        ]
+      ],
+      "ultimate": "ult_tempete_braises",
+      "evolvesTo": "Pyrolynx",
+      "evolveLevel": 18,
+      "assetFolder": "/Game/Aetherwild/Creatures/Braisillon"
+    },
+    {
+      "id": "Pyrolynx",
+      "name": "Pyrolynx",
+      "element": "Fire",
+      "rarity": "Rare",
+      "description": "Grand felin a criniere de flammes. Assez puissant pour porter un dresseur a travers les champs de lave.",
+      "stats": {
+        "hp": 70,
+        "atk": 21,
+        "def": 14,
+        "spi": 19,
+        "spd": 18
+      },
+      "catchRate": 0.18,
+      "baseXP": 110,
+      "biomes": [
+        "Volcano",
+        "Mountains"
+      ],
+      "minLevel": 18,
+      "maxLevel": 30,
+      "size": 3.0,
+      "movement": "Ground",
+      "rideable": true,
+      "walkSpeed": 300,
+      "runSpeed": 1250,
+      "temperament": "Territorial",
+      "color": "#b8321a",
+      "accent": "#ff7a1a",
+      "emitsLight": true,
+      "aptitudes": [
+        "Torche",
+        "Resiste a la lave"
+      ],
+      "learnset": [
+        [
+          1,
+          "morsure"
+        ],
+        [
+          1,
+          "flammeche"
+        ],
+        [
+          1,
+          "griffes_ardentes"
+        ],
+        [
+          18,
+          "charge_magma"
+        ],
+        [
+          22,
+          "souffle_brasier"
+        ],
+        [
+          28,
+          "cri_galvanisant"
+        ]
+      ],
+      "ultimate": "ult_crocs_magma",
+      "capture": {
+        "weakenedBy": "Water",
+        "maxHealth": 0.6,
+        "hint": "Seule une attaque d'Eau apaise ses flammes"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Pyrolynx"
+    },
+    {
+      "id": "Ondrelle",
+      "name": "Ondrelle",
+      "element": "Water",
+      "rarity": "Common",
+      "description": "Loutre joueuse qui glisse sur les berges. Excellente nageuse, elle adore eclabousser les promeneurs.",
+      "stats": {
+        "hp": 48,
+        "atk": 11,
+        "def": 11,
+        "spi": 13,
+        "spd": 12
+      },
+      "catchRate": 0.55,
+      "baseXP": 40,
+      "biomes": [
+        "Shore"
+      ],
+      "minLevel": 3,
+      "maxLevel": 10,
+      "size": 1.3,
+      "movement": "Amphibious",
+      "walkSpeed": 220,
+      "runSpeed": 650,
+      "temperament": "Skittish",
+      "color": "#3b7fb8",
+      "accent": "#6fe0ff",
+      "aptitudes": [
+        "Nage rapide"
+      ],
+      "learnset": [
+        [
+          1,
+          "morsure"
+        ],
+        [
+          1,
+          "jet_eau"
+        ],
+        [
+          6,
+          "queue_aqua"
+        ],
+        [
+          10,
+          "bulle_apaisante"
+        ],
+        [
+          15,
+          "vague"
+        ]
+      ],
+      "ultimate": "ult_maelstrom",
+      "evolvesTo": "Nereon",
+      "evolveLevel": 18,
+      "assetFolder": "/Game/Aetherwild/Creatures/Ondrelle"
+    },
+    {
+      "id": "Nereon",
+      "name": "Néréon",
+      "element": "Water",
+      "rarity": "Rare",
+      "description": "Gardien des lacs aux nageoires luminescentes. Il porte les dresseurs a la surface de l'eau comme sur la terre ferme.",
+      "stats": {
+        "hp": 80,
+        "atk": 17,
+        "def": 18,
+        "spi": 20,
+        "spd": 15
+      },
+      "catchRate": 0.16,
+      "baseXP": 110,
+      "biomes": [
+        "Shore",
+        "Water"
+      ],
+      "minLevel": 18,
+      "maxLevel": 30,
+      "size": 3.9,
+      "movement": "Amphibious",
+      "rideable": true,
+      "walkSpeed": 260,
+      "runSpeed": 1100,
+      "temperament": "Territorial",
+      "color": "#1f5f8b",
+      "accent": "#5ff0ff",
+      "emitsLight": true,
+      "aptitudes": [
+        "Monture aquatique",
+        "Nage rapide"
+      ],
+      "learnset": [
+        [
+          1,
+          "jet_eau"
+        ],
+        [
+          1,
+          "queue_aqua"
+        ],
+        [
+          1,
+          "vague"
+        ],
+        [
+          18,
+          "bulle_apaisante"
+        ],
+        [
+          24,
+          "charge"
+        ]
+      ],
+      "ultimate": "ult_maelstrom",
+      "capture": {
+        "phase": "Twilight",
+        "hint": "Ne se montre docile qu'a l'aube ou au crepuscule"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Nereon"
+    },
+    {
+      "id": "Feuillouve",
+      "name": "Feuillouve",
+      "element": "Nature",
+      "rarity": "Common",
+      "description": "Louveteau couvert de feuilles. Il se roule dans la mousse pour faire pousser son pelage.",
+      "stats": {
+        "hp": 50,
+        "atk": 12,
+        "def": 12,
+        "spi": 11,
+        "spd": 12
+      },
+      "catchRate": 0.55,
+      "baseXP": 40,
+      "biomes": [
+        "Forest",
+        "Plains"
+      ],
+      "minLevel": 3,
+      "maxLevel": 10,
+      "size": 1.2,
+      "movement": "Ground",
+      "walkSpeed": 230,
+      "runSpeed": 700,
+      "temperament": "Docile",
+      "color": "#5e8c3a",
+      "accent": "#9be05a",
+      "learnset": [
+        [
+          1,
+          "morsure"
+        ],
+        [
+          1,
+          "fouet_liane"
+        ],
+        [
+          6,
+          "photosynthese"
+        ],
+        [
+          9,
+          "graines_explosives"
+        ],
+        [
+          13,
+          "spores"
+        ]
+      ],
+      "ultimate": "ult_foret_vivante",
+      "evolvesTo": "Sylvecerf",
+      "evolveLevel": 18,
+      "assetFolder": "/Game/Aetherwild/Creatures/Feuillouve"
+    },
+    {
+      "id": "Sylvecerf",
+      "name": "Sylvecerf",
+      "element": "Nature",
+      "rarity": "Rare",
+      "description": "Cerf majestueux dont les bois portent des feuilles qui brillent au crepuscule. Monture rapide et sure en foret.",
+      "stats": {
+        "hp": 76,
+        "atk": 19,
+        "def": 16,
+        "spi": 18,
+        "spd": 19
+      },
+      "catchRate": 0.17,
+      "baseXP": 110,
+      "biomes": [
+        "Forest"
+      ],
+      "minLevel": 16,
+      "maxLevel": 28,
+      "size": 2.9,
+      "movement": "Ground",
+      "rideable": true,
+      "walkSpeed": 300,
+      "runSpeed": 1350,
+      "temperament": "Skittish",
+      "color": "#6b4a2e",
+      "accent": "#7fd65a",
+      "aptitudes": [
+        "Monture rapide"
+      ],
+      "learnset": [
+        [
+          1,
+          "charge_sylvestre"
+        ],
+        [
+          1,
+          "fouet_liane"
+        ],
+        [
+          1,
+          "photosynthese"
+        ],
+        [
+          16,
+          "spores"
+        ],
+        [
+          22,
+          "graines_explosives"
+        ]
+      ],
+      "ultimate": "ult_foret_vivante",
+      "capture": {
+        "requiresStatus": true,
+        "hint": "Trop vif : endors-le ou entrave-le d'abord"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Sylvecerf"
+    },
+    {
+      "id": "Moussibul",
+      "name": "Moussibul",
+      "element": "Nature",
+      "rarity": "Common",
+      "description": "Boule de mousse paisible surmontee d'une fleur. Elle dort au soleil la plupart de la journee.",
+      "stats": {
+        "hp": 56,
+        "atk": 8,
+        "def": 14,
+        "spi": 12,
+        "spd": 6
+      },
+      "catchRate": 0.65,
+      "baseXP": 32,
+      "biomes": [
+        "Plains",
+        "Forest"
+      ],
+      "minLevel": 2,
+      "maxLevel": 8,
+      "size": 0.65,
+      "movement": "Ground",
+      "walkSpeed": 130,
+      "runSpeed": 330,
+      "temperament": "Docile",
+      "color": "#6fa04a",
+      "accent": "#e85da0",
+      "learnset": [
+        [
+          1,
+          "charge"
+        ],
+        [
+          1,
+          "spores"
+        ],
+        [
+          5,
+          "photosynthese"
+        ],
+        [
+          10,
+          "graines_explosives"
+        ]
+      ],
+      "ultimate": "ult_foret_vivante",
+      "assetFolder": "/Game/Aetherwild/Creatures/Moussibul"
+    },
+    {
+      "id": "Galetor",
+      "name": "Galetor",
+      "element": "Stone",
+      "rarity": "Uncommon",
+      "description": "Golem de roche parcouru de veines de magma. Il defend son territoire montagneux avec acharnement.",
+      "stats": {
+        "hp": 82,
+        "atk": 18,
+        "def": 22,
+        "spi": 8,
+        "spd": 6
+      },
+      "catchRate": 0.3,
+      "baseXP": 70,
+      "biomes": [
+        "Mountains",
+        "Peaks"
+      ],
+      "minLevel": 10,
+      "maxLevel": 22,
+      "size": 2.3,
+      "movement": "Ground",
+      "walkSpeed": 160,
+      "runSpeed": 420,
+      "temperament": "Territorial",
+      "color": "#7a7468",
+      "accent": "#ffb347",
+      "aptitudes": [
+        "Brise-roche"
+      ],
+      "learnset": [
+        [
+          1,
+          "poing_roc"
+        ],
+        [
+          1,
+          "jet_pierres"
+        ],
+        [
+          12,
+          "carapace"
+        ],
+        [
+          16,
+          "seisme"
+        ]
+      ],
+      "ultimate": "ult_eboulement",
+      "capture": {
+        "minTamerLevel": 3,
+        "hint": "Ne respecte que les dresseurs experimentes"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Galetor"
+    },
+    {
+      "id": "Volterelle",
+      "name": "Volterelle",
+      "element": "Storm",
+      "rarity": "Uncommon",
+      "description": "Petit oiseau electrique. Sa crete crepite quand l'orage approche.",
+      "stats": {
+        "hp": 42,
+        "atk": 11,
+        "def": 9,
+        "spi": 15,
+        "spd": 20
+      },
+      "catchRate": 0.4,
+      "baseXP": 55,
+      "biomes": [
+        "Plains",
+        "Shore",
+        "Mountains"
+      ],
+      "minLevel": 5,
+      "maxLevel": 14,
+      "size": 1.0,
+      "movement": "Flying",
+      "walkSpeed": 300,
+      "runSpeed": 900,
+      "temperament": "Skittish",
+      "color": "#f2d43a",
+      "accent": "#9be7ff",
+      "aptitudes": [
+        "Vol"
+      ],
+      "learnset": [
+        [
+          1,
+          "etincelle"
+        ],
+        [
+          1,
+          "morsure"
+        ],
+        [
+          8,
+          "plongeon_orageux"
+        ],
+        [
+          14,
+          "eclair"
+        ]
+      ],
+      "ultimate": "ult_colere_ciel",
+      "evolvesTo": "Orajaile",
+      "evolveLevel": 30,
+      "assetFolder": "/Game/Aetherwild/Creatures/Volterelle"
+    },
+    {
+      "id": "Orajaile",
+      "name": "Orajaile",
+      "element": "Storm",
+      "rarity": "Epic",
+      "description": "Seigneur des orages aux ailes striees d'eclairs. On ne l'apercoit qu'au coeur de la tempete, au-dessus des cimes.",
+      "stats": {
+        "hp": 88,
+        "atk": 22,
+        "def": 16,
+        "spi": 26,
+        "spd": 24
+      },
+      "catchRate": 0.08,
+      "baseXP": 180,
+      "biomes": [
+        "Mountains",
+        "Peaks"
+      ],
+      "spawnWeathers": [
+        "Rain",
+        "Storm"
+      ],
+      "minLevel": 28,
+      "maxLevel": 40,
+      "size": 5.8,
+      "movement": "Flying",
+      "rideable": true,
+      "walkSpeed": 400,
+      "runSpeed": 1600,
+      "temperament": "Aggressive",
+      "color": "#2f3e6b",
+      "accent": "#8fe3ff",
+      "emitsLight": true,
+      "aptitudes": [
+        "Monture volante"
+      ],
+      "learnset": [
+        [
+          1,
+          "etincelle"
+        ],
+        [
+          1,
+          "plongeon_orageux"
+        ],
+        [
+          1,
+          "eclair"
+        ],
+        [
+          32,
+          "cri_galvanisant"
+        ]
+      ],
+      "ultimate": "ult_colere_ciel",
+      "capture": {
+        "weathers": [
+          "Storm"
+        ],
+        "maxHealth": 0.4,
+        "minTamerLevel": 8,
+        "hint": "Ne peut etre capture qu'en plein orage"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Orajaile"
+    },
+    {
+      "id": "Givrelan",
+      "name": "Givrelan",
+      "element": "Frost",
+      "rarity": "Rare",
+      "description": "Elan des neiges aux bois de cristal. Ses sabots gelent le sol a chaque pas.",
+      "stats": {
+        "hp": 84,
+        "atk": 20,
+        "def": 19,
+        "spi": 18,
+        "spd": 14
+      },
+      "catchRate": 0.15,
+      "baseXP": 120,
+      "biomes": [
+        "Peaks"
+      ],
+      "minLevel": 20,
+      "maxLevel": 32,
+      "size": 3.0,
+      "movement": "Ground",
+      "rideable": true,
+      "walkSpeed": 280,
+      "runSpeed": 1150,
+      "temperament": "Territorial",
+      "color": "#dde8f2",
+      "accent": "#7fdbff",
+      "aptitudes": [
+        "Monture des neiges",
+        "Insensible au froid"
+      ],
+      "learnset": [
+        [
+          1,
+          "pics_glace"
+        ],
+        [
+          1,
+          "souffle_givrant"
+        ],
+        [
+          1,
+          "charge"
+        ],
+        [
+          24,
+          "blizzard"
+        ],
+        [
+          28,
+          "carapace"
+        ]
+      ],
+      "ultimate": "ult_zero_absolu",
+      "capture": {
+        "weakenedBy": "Fire",
+        "hint": "Il faut d'abord faire fondre sa carapace de givre (attaque de Feu)"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Givrelan"
+    },
+    {
+      "id": "Grelichon",
+      "name": "Grelichon",
+      "element": "Frost",
+      "rarity": "Common",
+      "description": "Petite boule de neige vivante herissee de cristaux. Elle grandit lentement jusqu'a devenir un Givrelan.",
+      "stats": {
+        "hp": 46,
+        "atk": 10,
+        "def": 13,
+        "spi": 12,
+        "spd": 9
+      },
+      "catchRate": 0.55,
+      "baseXP": 40,
+      "biomes": [
+        "Peaks",
+        "Mountains"
+      ],
+      "minLevel": 8,
+      "maxLevel": 16,
+      "size": 0.6,
+      "movement": "Ground",
+      "walkSpeed": 150,
+      "runSpeed": 420,
+      "temperament": "Docile",
+      "color": "#e8f6ff",
+      "accent": "#8fe8ff",
+      "learnset": [
+        [
+          1,
+          "charge"
+        ],
+        [
+          1,
+          "souffle_givrant"
+        ],
+        [
+          10,
+          "pics_glace"
+        ],
+        [
+          16,
+          "blizzard"
+        ]
+      ],
+      "ultimate": "ult_zero_absolu",
+      "evolvesTo": "Givrelan",
+      "evolveLevel": 24,
+      "assetFolder": "/Game/Aetherwild/Creatures/Grelichon"
+    },
+    {
+      "id": "Nocthys",
+      "name": "Nocthys",
+      "element": "Shadow",
+      "rarity": "Rare",
+      "description": "Lynx nocturne aux taches violettes phosphorescentes. Il chasse dans les forets profondes et disparait a l'aube.",
+      "stats": {
+        "hp": 60,
+        "atk": 20,
+        "def": 12,
+        "spi": 18,
+        "spd": 22
+      },
+      "catchRate": 0.2,
+      "baseXP": 100,
+      "biomes": [
+        "Forest"
+      ],
+      "spawnPhase": "Night",
+      "minLevel": 12,
+      "maxLevel": 24,
+      "size": 1.8,
+      "movement": "Ground",
+      "walkSpeed": 260,
+      "runSpeed": 980,
+      "temperament": "Skittish",
+      "color": "#1e1b2e",
+      "accent": "#b47cff",
+      "emitsLight": true,
+      "aptitudes": [
+        "Vision nocturne"
+      ],
+      "learnset": [
+        [
+          1,
+          "griffe_ombre"
+        ],
+        [
+          1,
+          "bond_obscur"
+        ],
+        [
+          14,
+          "voile_nocturne"
+        ],
+        [
+          18,
+          "morsure"
+        ]
+      ],
+      "ultimate": "ult_eclipse",
+      "capture": {
+        "phase": "Night",
+        "hint": "Ne se laisse capturer que de nuit"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Nocthys"
+    },
+    {
+      "id": "Marevore",
+      "name": "Marévore",
+      "element": "Water",
+      "element2": "Shadow",
+      "rarity": "Legendary",
+      "description": "Serpent des abysses long de quinze metres. Il ne remonte a la surface du grand lac que sous la pluie.",
+      "stats": {
+        "hp": 130,
+        "atk": 28,
+        "def": 24,
+        "spi": 30,
+        "spd": 18
+      },
+      "catchRate": 0.05,
+      "baseXP": 300,
+      "biomes": [
+        "Water"
+      ],
+      "spawnWeathers": [
+        "Rain",
+        "Storm"
+      ],
+      "minLevel": 42,
+      "maxLevel": 50,
+      "size": 14.4,
+      "movement": "Swimming",
+      "rideable": true,
+      "walkSpeed": 350,
+      "runSpeed": 1500,
+      "temperament": "Aggressive",
+      "color": "#123e5c",
+      "accent": "#3fffe0",
+      "emitsLight": true,
+      "aptitudes": [
+        "Monture des abysses",
+        "Legendaire"
+      ],
+      "learnset": [
+        [
+          1,
+          "queue_aqua"
+        ],
+        [
+          1,
+          "vague"
+        ],
+        [
+          1,
+          "bond_obscur"
+        ],
+        [
+          1,
+          "jet_eau"
+        ]
+      ],
+      "ultimate": "ult_raz_de_maree",
+      "capture": {
+        "weathers": [
+          "Rain",
+          "Storm"
+        ],
+        "maxHealth": 0.25,
+        "minTamerLevel": 15,
+        "hint": "Affaiblis-le sous 25% de PV, sous la pluie"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Marevore"
+    },
+    {
+      "id": "Solarion",
+      "name": "Solarion",
+      "element": "Light",
+      "element2": "Fire",
+      "rarity": "Legendary",
+      "description": "Oiseau-soleil legendaire. Il se pose sur les plus hauts sommets a l'aube et au crepuscule pour saluer le jour.",
+      "stats": {
+        "hp": 120,
+        "atk": 26,
+        "def": 22,
+        "spi": 34,
+        "spd": 26
+      },
+      "catchRate": 0.04,
+      "baseXP": 320,
+      "biomes": [
+        "Peaks",
+        "Volcano"
+      ],
+      "spawnPhase": "Twilight",
+      "minLevel": 45,
+      "maxLevel": 55,
+      "size": 6.7,
+      "movement": "Flying",
+      "rideable": true,
+      "walkSpeed": 400,
+      "runSpeed": 1900,
+      "temperament": "Territorial",
+      "color": "#ffe7a3",
+      "accent": "#fff3c4",
+      "emitsLight": true,
+      "aptitudes": [
+        "Monture volante",
+        "Lumiere",
+        "Legendaire"
+      ],
+      "learnset": [
+        [
+          1,
+          "rayon_lumiere"
+        ],
+        [
+          1,
+          "flash"
+        ],
+        [
+          1,
+          "souffle_brasier"
+        ],
+        [
+          1,
+          "aura_soin"
+        ]
+      ],
+      "ultimate": "ult_supernova",
+      "capture": {
+        "phase": "Twilight",
+        "weakenedBy": "Shadow",
+        "maxHealth": 0.2,
+        "minTamerLevel": 20,
+        "hint": "Au crepuscule, voile sa lumiere avec une attaque d'Ombre"
+      },
+      "assetFolder": "/Game/Aetherwild/Creatures/Solarion"
+    },
+    {
+      "id": "Cendrebuffle",
+      "name": "Cendrebuffle",
+      "element": "Fire",
+      "element2": "Stone",
+      "rarity": "Uncommon",
+      "description": "Taureau volcanique a la peau craquelee de lave. Irascible, il charge tout ce qui bouge.",
+      "stats": {
+        "hp": 78,
+        "atk": 21,
+        "def": 18,
+        "spi": 10,
+        "spd": 11
+      },
+      "catchRate": 0.3,
+      "baseXP": 75,
+      "biomes": [
+        "Volcano",
+        "Mountains"
+      ],
+      "minLevel": 14,
+      "maxLevel": 26,
+      "size": 2.9,
+      "movement": "Ground",
+      "rideable": true,
+      "walkSpeed": 220,
+      "runSpeed": 1000,
+      "temperament": "Aggressive",
+      "color": "#3a2f2a",
+      "accent": "#ff5a1f",
+      "emitsLight": true,
+      "aptitudes": [
+        "Monture robuste",
+        "Brise-roche"
+      ],
+      "learnset": [
+        [
+          1,
+          "charge"
+        ],
+        [
+          1,
+          "charge_magma"
+        ],
+        [
+          1,
+          "poing_roc"
+        ],
+        [
+          18,
+          "seisme"
+        ],
+        [
+          22,
+          "carapace"
+        ]
+      ],
+      "ultimate": "ult_coulee_lave",
+      "assetFolder": "/Game/Aetherwild/Creatures/Cendrebuffle"
+    },
+    {
+      "id": "Lumiole",
+      "name": "Lumiole",
+      "element": "Light",
+      "rarity": "Common",
+      "description": "Petite luciole ronde qui sort la nuit dans les prairies. Ses antennes eclairent comme des lanternes.",
+      "stats": {
+        "hp": 38,
+        "atk": 7,
+        "def": 9,
+        "spi": 16,
+        "spd": 13
+      },
+      "catchRate": 0.6,
+      "baseXP": 36,
+      "biomes": [
+        "Plains",
+        "Forest"
+      ],
+      "spawnPhase": "Night",
+      "minLevel": 3,
+      "maxLevel": 12,
+      "size": 0.5,
+      "movement": "Ground",
+      "walkSpeed": 170,
+      "runSpeed": 450,
+      "temperament": "Docile",
+      "color": "#f5f0d0",
+      "accent": "#fff27a",
+      "emitsLight": true,
+      "aptitudes": [
+        "Lanterne vivante"
+      ],
+      "learnset": [
+        [
+          1,
+          "rayon_lumiere"
+        ],
+        [
+          1,
+          "flash"
+        ],
+        [
+          8,
+          "aura_soin"
+        ]
+      ],
+      "ultimate": "ult_supernova",
+      "assetFolder": "/Game/Aetherwild/Creatures/Lumiole"
+    },
+    {
+      "id": "Rampage",
+      "name": "Rampage",
+      "element": "Stone",
+      "rarity": "Epic",
+      "description": "Colosse des montagnes, banni des siens a cause de sa taille et de sa fureur. Il arrache des blocs de roche pour les projeter et fait trembler le sol a chaque coup. On dit qu'un dresseur assez fort peut canaliser sa rage.",
+      "stats": {
+        "hp": 110,
+        "atk": 27,
+        "def": 24,
+        "spi": 12,
+        "spd": 12
+      },
+      "catchRate": 0.08,
+      "baseXP": 190,
+      "biomes": [
+        "Mountains",
+        "Peaks"
+      ],
+      "minLevel": 26,
+      "maxLevel": 38,
+      "size": 3.2,
+      "movement": "Ground",
+      "rideable": true,
+      "walkSpeed": 260,
+      "runSpeed": 780,
+      "temperament": "Territorial",
+      "color": "#6b6258",
+      "accent": "#7fd0ff",
+      "aptitudes": [
+        "Monture colossale",
+        "Brise-roche",
+        "Lanceur de rochers"
+      ],
+      "learnset": [
+        [
+          1,
+          "poing_roc"
+        ],
+        [
+          1,
+          "jet_pierres"
+        ],
+        [
+          1,
+          "charge"
+        ],
+        [
+          28,
+          "seisme"
+        ],
+        [
+          32,
+          "carapace"
+        ]
+      ],
+      "ultimate": "ult_eboulement",
+      "capture": {
+        "maxHealth": 0.35,
+        "minTamerLevel": 8,
+        "hint": "Seul un dresseur aguerri peut canaliser sa rage : affaiblis-le sous 35% de PV"
+      },
+      "assetFolder": "/Game/ParagonRampage",
+      "visual": {
+        "mesh": "",
+        "anims": {},
+        "yaw": -90,
+        "keepScale": true
+      }
+    }
+  ]
+}

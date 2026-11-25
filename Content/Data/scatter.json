@@ -1,0 +1,29 @@
+{
+  "_doc": "Couches de vegetation generees autour du joueur. Pour un rendu PHOTOREALISTE, remplace les chemins 'meshes' par des assets Megascans/Fab (arbres Nanite, herbes, rochers), ex. /Game/Fab/Megascans/3D/Mossy_Rock_xxx/.... density = instances par hectare, cellSize/height en metres, slope en degres, forest = densite forestiere 0..1, cull = distance d'affichage en cm.",
+  "layers": [
+    { "name": "Forets de feuillus", "meshes": ["/Game/Aetherwild/Environment/SM_Tree_Broadleaf_A.SM_Tree_Broadleaf_A", "/Game/Aetherwild/Environment/SM_Tree_Broadleaf_B.SM_Tree_Broadleaf_B"],
+      "density": 110, "cellSize": 128, "viewCells": 6, "scale": [0.8, 1.35], "height": [2, 380], "slope": [0, 28], "forest": [0.55, 1.0],
+      "collision": true, "shadows": true, "cull": [0, 90000], "sink": 30 },
+    { "name": "Forets de coniferes", "meshes": ["/Game/Aetherwild/Environment/SM_Tree_Pine_A.SM_Tree_Pine_A", "/Game/Aetherwild/Environment/SM_Tree_Pine_B.SM_Tree_Pine_B"],
+      "density": 90, "cellSize": 128, "viewCells": 6, "scale": [0.75, 1.3], "height": [150, 640], "slope": [0, 36], "forest": [0.3, 1.0],
+      "collision": true, "shadows": true, "cull": [0, 90000], "sink": 30 },
+    { "name": "Arbres isoles", "meshes": ["/Game/Aetherwild/Environment/SM_Tree_Broadleaf_A.SM_Tree_Broadleaf_A", "/Game/Aetherwild/Environment/SM_Tree_Pine_B.SM_Tree_Pine_B"],
+      "density": 3, "cellSize": 256, "viewCells": 3, "scale": [0.9, 1.5], "height": [3, 400], "slope": [0, 20], "forest": [0.0, 0.55],
+      "collision": true, "shadows": true, "cull": [0, 90000], "sink": 30 },
+    { "name": "Buissons", "meshes": ["/Game/Aetherwild/Environment/SM_Bush.SM_Bush"],
+      "density": 140, "cellSize": 64, "viewCells": 4, "scale": [0.6, 1.5], "height": [1, 450], "slope": [0, 30], "forest": [0.25, 1.0],
+      "collision": false, "shadows": true, "cull": [0, 26000], "sink": 15 },
+    { "name": "Rochers", "meshes": ["/Game/Aetherwild/Environment/SM_Rock_A.SM_Rock_A", "/Game/Aetherwild/Environment/SM_Rock_B.SM_Rock_B"],
+      "density": 22, "cellSize": 128, "viewCells": 5, "scale": [0.4, 2.4], "height": [-3, 950], "slope": [0, 55],
+      "align": true, "collision": true, "shadows": true, "cull": [0, 60000], "sink": 25 },
+    { "name": "Blocs et falaises", "meshes": ["/Game/Aetherwild/Environment/SM_Boulder.SM_Boulder", "/Game/Aetherwild/Environment/SM_Cliff.SM_Cliff"],
+      "density": 3, "cellSize": 256, "viewCells": 4, "scale": [0.6, 1.8], "height": [60, 950], "slope": [18, 75],
+      "align": true, "collision": true, "shadows": true, "cull": [0, 160000], "sink": 120 },
+    { "name": "Scories du volcan", "meshes": ["/Game/Aetherwild/Environment/SM_Rock_B.SM_Rock_B", "/Game/Aetherwild/Environment/SM_Boulder.SM_Boulder"],
+      "density": 30, "cellSize": 128, "viewCells": 4, "scale": [0.4, 1.6], "height": [40, 950], "slope": [0, 60], "volcanoDist": [0, 1300],
+      "align": true, "collision": true, "shadows": true, "cull": [0, 70000], "sink": 30 },
+    { "name": "Herbe", "meshes": ["/Game/Aetherwild/Environment/SM_Grass.SM_Grass", "/Game/Aetherwild/Environment/SM_Grass.SM_Grass", "/Game/Aetherwild/Environment/SM_Grass_Flowers.SM_Grass_Flowers", "/Game/Aetherwild/Environment/SM_Grass_FlowersPink.SM_Grass_FlowersPink"],
+      "density": 6000, "cellSize": 32, "viewCells": 2, "scale": [0.7, 1.4], "height": [1.5, 520], "slope": [0, 30], "forest": [0.0, 0.85],
+      "align": true, "collision": false, "shadows": false, "cull": [4000, 7000], "sink": 2 }
+  ]
+}

@@ -1,0 +1,5 @@
+*.bat text eol=crlf
+*.fbx binary
+*.png binary
+*.uasset binary
+*.umap binary

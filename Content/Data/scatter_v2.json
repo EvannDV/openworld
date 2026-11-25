@@ -1,0 +1,466 @@
+{
+ "_doc": "Vegetation v2 (direction artistique des rendus Docs/previews/map). Activee par Tools/Unreal/apply_world_v2.py. Memes regles que scatter.json : density = instances/hectare, height en metres, slope en degres, forest 0..1, volcanoDist en metres.",
+ "layers": [
+  {
+   "name": "Forets de feuillus",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Tree_Green_A.SM_V2_Tree_Green_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Tree_Green_B.SM_V2_Tree_Green_B",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Tree_Autumn_A.SM_V2_Tree_Autumn_A"
+   ],
+   "density": 110,
+   "cellSize": 128,
+   "viewCells": 6,
+   "scale": [
+    0.85,
+    1.25
+   ],
+   "height": [
+    3,
+    320
+   ],
+   "slope": [
+    0,
+    28
+   ],
+   "forest": [
+    0.55,
+    1.0
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    110000
+   ],
+   "sink": 30
+  },
+  {
+   "name": "Forets de coniferes",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Pine_A.SM_V2_Pine_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Pine_B.SM_V2_Pine_B"
+   ],
+   "density": 95,
+   "cellSize": 128,
+   "viewCells": 6,
+   "scale": [
+    0.75,
+    1.2
+   ],
+   "height": [
+    140,
+    640
+   ],
+   "slope": [
+    0,
+    36
+   ],
+   "forest": [
+    0.3,
+    1.0
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    110000
+   ],
+   "sink": 30
+  },
+  {
+   "name": "Cerisiers et arbres isoles",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Tree_Blossom_A.SM_V2_Tree_Blossom_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Tree_Blossom_A.SM_V2_Tree_Blossom_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Tree_Green_A.SM_V2_Tree_Green_A"
+   ],
+   "density": 3,
+   "cellSize": 256,
+   "viewCells": 3,
+   "scale": [
+    0.9,
+    1.35
+   ],
+   "height": [
+    3,
+    220
+   ],
+   "slope": [
+    0,
+    18
+   ],
+   "forest": [
+    0.0,
+    0.5
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    110000
+   ],
+   "sink": 30
+  },
+  {
+   "name": "Arbres morts du volcan",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Dead_A.SM_V2_Dead_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Dead_B.SM_V2_Dead_B"
+   ],
+   "density": 6,
+   "cellSize": 128,
+   "viewCells": 4,
+   "scale": [
+    0.8,
+    1.3
+   ],
+   "height": [
+    30,
+    700
+   ],
+   "slope": [
+    0,
+    30
+   ],
+   "volcanoDist": [
+    0,
+    1500
+   ],
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    60000
+   ],
+   "sink": 20
+  },
+  {
+   "name": "Fougeres",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Fern_A.SM_V2_Fern_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Fern_B.SM_V2_Fern_B"
+   ],
+   "density": 650,
+   "cellSize": 32,
+   "viewCells": 3,
+   "scale": [
+    0.7,
+    1.4
+   ],
+   "height": [
+    2,
+    320
+   ],
+   "slope": [
+    0,
+    32
+   ],
+   "forest": [
+    0.5,
+    1.0
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "align": true,
+   "collision": false,
+   "shadows": false,
+   "cull": [
+    3000,
+    7000
+   ],
+   "sink": 5
+  },
+  {
+   "name": "Prairies fleuries",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_A.SM_V2_Grass_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_A.SM_V2_Grass_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_B.SM_V2_Grass_B",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_B.SM_V2_Grass_B",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Flowers_Yellow.SM_V2_Flowers_Yellow",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Flowers_Pink.SM_V2_Flowers_Pink",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Flowers_White.SM_V2_Flowers_White"
+   ],
+   "density": 9000,
+   "cellSize": 32,
+   "viewCells": 2,
+   "scale": [
+    0.75,
+    1.3
+   ],
+   "height": [
+    1.5,
+    260
+   ],
+   "slope": [
+    0,
+    30
+   ],
+   "forest": [
+    0.0,
+    0.6
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "align": true,
+   "collision": false,
+   "shadows": false,
+   "cull": [
+    4500,
+    8000
+   ],
+   "sink": 2
+  },
+  {
+   "name": "Sous-bois",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_Forest.SM_V2_Grass_Forest"
+   ],
+   "density": 4500,
+   "cellSize": 32,
+   "viewCells": 2,
+   "scale": [
+    0.7,
+    1.2
+   ],
+   "height": [
+    2,
+    320
+   ],
+   "slope": [
+    0,
+    32
+   ],
+   "forest": [
+    0.5,
+    1.0
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "align": true,
+   "collision": false,
+   "shadows": false,
+   "cull": [
+    4000,
+    7000
+   ],
+   "sink": 2
+  },
+  {
+   "name": "Alpages",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_Alpine.SM_V2_Grass_Alpine",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_Alpine.SM_V2_Grass_Alpine",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Flowers_Blue.SM_V2_Flowers_Blue"
+   ],
+   "density": 6500,
+   "cellSize": 32,
+   "viewCells": 2,
+   "scale": [
+    0.7,
+    1.2
+   ],
+   "height": [
+    250,
+    590
+   ],
+   "slope": [
+    0,
+    32
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "align": true,
+   "collision": false,
+   "shadows": false,
+   "cull": [
+    4000,
+    7000
+   ],
+   "sink": 2
+  },
+  {
+   "name": "Dunes",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Grass_Dune.SM_V2_Grass_Dune"
+   ],
+   "density": 3200,
+   "cellSize": 32,
+   "viewCells": 2,
+   "scale": [
+    0.8,
+    1.3
+   ],
+   "height": [
+    1.6,
+    9
+   ],
+   "slope": [
+    0,
+    25
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "align": true,
+   "collision": false,
+   "shadows": false,
+   "cull": [
+    4000,
+    7000
+   ],
+   "sink": 2
+  },
+  {
+   "name": "Rochers moussus",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Rock_Mossy.SM_V2_Rock_Mossy",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Rock_Large.SM_V2_Rock_Large"
+   ],
+   "density": 20,
+   "cellSize": 128,
+   "viewCells": 5,
+   "scale": [
+    0.5,
+    1.8
+   ],
+   "height": [
+    3,
+    950
+   ],
+   "slope": [
+    0,
+    55
+   ],
+   "volcanoDist": [
+    1400,
+    1000000000.0
+   ],
+   "align": true,
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    70000
+   ],
+   "sink": 25
+  },
+  {
+   "name": "Blocs et falaises",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Boulder.SM_V2_Boulder",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Cliff.SM_V2_Cliff"
+   ],
+   "density": 3,
+   "cellSize": 256,
+   "viewCells": 4,
+   "scale": [
+    0.6,
+    1.6
+   ],
+   "height": [
+    60,
+    950
+   ],
+   "slope": [
+    18,
+    75
+   ],
+   "align": true,
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    160000
+   ],
+   "sink": 120
+  },
+  {
+   "name": "Rochers du rivage",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Rock_Shore.SM_V2_Rock_Shore"
+   ],
+   "density": 14,
+   "cellSize": 128,
+   "viewCells": 4,
+   "scale": [
+    0.5,
+    1.6
+   ],
+   "height": [
+    -3,
+    6
+   ],
+   "slope": [
+    0,
+    50
+   ],
+   "align": true,
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    60000
+   ],
+   "sink": 30
+  },
+  {
+   "name": "Basalte et eboulis du volcan",
+   "meshes": [
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Basalt_A.SM_V2_Basalt_A",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Basalt_Pebble.SM_V2_Basalt_Pebble",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Basalt_Pebble.SM_V2_Basalt_Pebble",
+    "/Game/Aetherwild/EnvironmentV2/SM_V2_Basalt_Pebble.SM_V2_Basalt_Pebble"
+   ],
+   "density": 160,
+   "cellSize": 64,
+   "viewCells": 4,
+   "scale": [
+    0.5,
+    1.8
+   ],
+   "height": [
+    20,
+    950
+   ],
+   "slope": [
+    0,
+    60
+   ],
+   "volcanoDist": [
+    0,
+    1500
+   ],
+   "align": true,
+   "collision": true,
+   "shadows": true,
+   "cull": [
+    0,
+    50000
+   ],
+   "sink": 10
+  }
+ ]
+}
